@@ -1,0 +1,79 @@
+/* style.css */
+
+/* Change the background color of the body */
+body {
+    background-color: linear-gradient(to right, red , rgb(0, 38, 255)); /* Replace with your desired background color */
+    /* color: rgb(0, 45, 247); Change text color to white */
+    font-family: Arial, sans-serif; /* Optional: Set a font for better appearance */
+    font-size: 20px;
+
+    background-position: center top; /* or center center, depending on your desired alignment */
+    background-attachment: fixed; /* optional, but can help prevent the image from scrolling */
+    background-size: 97% auto; /* Set width to 90% of the viewport width, height auto */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.hidden {
+    display: none;
+}
+
+#desktop-message {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24px;
+    color: #ff0000; /* Red color for emphasis */
+}
+
+p {
+    margin-top: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+/* Specific styles for each page */
+.page-one {
+    background-image:url('images/C.jpg'); /* Background for index.html */
+}
+
+.page-two {
+    background-image:url('images/chewingGum.jpg'); /* Background for pageTwo.html */
+}
+
+/* 
+h1 {
+    color:#0026ff; 
+} */
+
+#pageOneText {
+    color:#0026ff;
+}
+
+#pageTwoText{
+    color:#0026ff;
+}
+
+#pageOneTextTwo {
+    color:#0216c9; /* Set background text color to black (or any color you prefer) */
+}
+
+#inputField {
+    /* visibility: hidden; */
+
+    color:#f63d13 !important; 
+    font-family: Arial, sans-serif; /* Match the font family */
+    font-size: 20px; /* Match the font size */
+    line-height: 1.5; /* Match the line height */
+    background-color: transparent; /* Make the background transparent */
+    border: transparent;
+    outline: none; /* Remove the outline when focused */
+    color: inherit; /* Inherit the text color from the parent */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    width: 100%; /* Ensure the input field spans the full width */
+    height: 100%; /* Ensure the input field spans the full height */
+    caret-color: transparent;
+    z-index: 10;
+    pointer-events: auto;
+}
