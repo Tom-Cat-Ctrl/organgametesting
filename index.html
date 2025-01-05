@@ -13,11 +13,14 @@
     <div id="mobile-content" class="hidden">
         <div id="page-one-text-container">
             <p id="pageOneText" class="hidden">Some text within this game is going to appear green. In order to navigate the game, you are going to first press the text and then type it out yourself.</p>
-        </div>
-        <div id="page-two-text-container">
+        
             <p id="pageOneTextTwo" class="hidden">I will</p>
             <input type="text" id="inputField" placeholder="                 ">
         </div>
+        <!-- <div id="page-two-text-container">
+            <p id="pageOneTextTwo" class="hidden">I will</p>
+            <input type="text" id="inputField" placeholder="                 ">
+        </div> -->
     </div>
     <div id="desktop-message" class="hidden">
         <p id ="desktopMessage" class="hidden">go to your mobile</p>
@@ -28,11 +31,11 @@
             console.log("Any console log"); // Debug
 
             // Start the typewriter effect for pageOneText
-            startTypewriterEffect("pageOneText", 100, function() {
+            startTypewriterEffect("pageOneText", 20, function() {
                 console.log("Page One Text completed. Starting Text Two..."); // Debug
 
                 // After pageOneText finishes, start the typewriter effect for pageTwoText
-                startTypewriterEffect("pageOneTextTwo", 100, function() {
+                startTypewriterEffect("pageOneTextTwo", 200, function() {
                     console.log("Text two completed. Setting up input field..."); // Debug
                     // After pageTwoText finishes, show the input field
                     const inputField = document.getElementById("inputField");
