@@ -5,7 +5,7 @@ body {
     background-color: linear-gradient(to right, red , rgb(0, 38, 255)); /* Replace with your desired background color */
     /* color: rgb(0, 45, 247); Change text color to white */
     font-family: Arial, sans-serif; /* Optional: Set a font for better appearance */
-    font-size: 20px;
+    font-size: 17px;
 
     background-position: center top; /* or center center, depending on your desired alignment */
     background-attachment: fixed; /* optional, but can help prevent the image from scrolling */
@@ -93,7 +93,7 @@ p {
     position: absolute;
     color:#f63d13 !important; 
     font-family: Arial, sans-serif; /* Match the font family */
-    font-size: 20px; /* Match the font size */
+    font-size: 17px; /* Match the font size */
     line-height: 1.5; /* Match the line height */
     background-color: transparent; /* Make the background transparent */
     border: transparent;
