@@ -34,7 +34,7 @@ p {
 
 /* Specific styles for each page */
 .page-one {
-    background-image:url('images/BackgroundOne.jpg'); /* Background for index.html */
+    background-image:url('images/BackgroundZero.jpg'); /* Background for index.html */
     background-size: 100% 100%; /* Stretch to fill the screen exactly */
     background-position: center;
     background-repeat: no-repeat;
