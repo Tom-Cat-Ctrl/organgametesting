@@ -69,13 +69,13 @@ p {
     position: relative; /* Create a positioning context */
 }
 
-#pageOneText {
+#paragraphText {
     position: relative;
     color:#0026ff;
     z-index: 2;
 }
 
-#pageOneTextTwo {
+#typingText {
     position: absolute;
     top: 100%; /* Place it directly below the first text */
     left: 0; /* Align it with the left edge of the first text */

@@ -12,37 +12,35 @@
 <body class="page-one">
     <div id="mobile-content" class="hidden">
         <div id="page-one-text-container">
-            <p id="pageOneText" class="hidden">Some text within this game is going to appear green. In order to navigate the game, you are going to first press the text and then type it out yourself.</p>
+            <p id="paragraphText" class="hidden">Certain text in this game is going to appear green. In order to navigate the game you are going to first press the text and then type it out yourself.</p>
         
-            <p id="pageOneTextTwo" class="hidden">I will</p>
+            <p id="typingText" class="hidden">I will</p>
             <input type="text" id="inputField" placeholder="                 ">
         </div>
-        <!-- <div id="page-two-text-container">
-            <p id="pageOneTextTwo" class="hidden">I will</p>
-            <input type="text" id="inputField" placeholder="                 ">
-        </div> -->
     </div>
     <div id="desktop-message" class="hidden">
         <p id ="desktopMessage" class="hidden">go to your mobile</p>
     </div>
+
     <script src="app.js"></script>
+
     <script>
         function startSequence() {
             console.log("Any console log"); // Debug
 
             // Start the typewriter effect for pageOneText
-            startTypewriterEffect("pageOneText", 20, function() {
+            startTypewriterEffect("paragraphText", 100, function() {
                 console.log("Page One Text completed. Starting Text Two..."); // Debug
 
                 // After pageOneText finishes, start the typewriter effect for pageTwoText
-                startTypewriterEffect("pageOneTextTwo", 200, function() {
+                startTypewriterEffect("typingText", 100, function() {
                     console.log("Text two completed. Setting up input field..."); // Debug
                     // After pageTwoText finishes, show the input field
                     const inputField = document.getElementById("inputField");
                     inputField.classList.remove("hidden");
                     inputField.focus();
                     // Set up the input field to check for matching text
-                    setupInputField("pageOneTextTwo", "inputField", "pageTwo.html");
+                    setupInputField("typingText", "inputField", "dayOneZero.html");
                 });
             });
         }

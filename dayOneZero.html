@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="deviceDetection.js"></script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day one</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <script src="universalFunctions.js"></script>
+</head>
+<body class="page-one">
+    <div id="mobile-content" class="hidden">
+        <div id="page-one-text-container">
+            <p id="paragraphText" class="hidden">You go outside.</p>
+        
+            <p id="typingText" class="hidden">I pick up my coat. The cloth is cold and damp. I pull it across and over my arms and shoulders </p>
+            <input type="text" id="inputField" placeholder="                 ">
+        </div>
+    </div>
+    <div id="desktop-message" class="hidden">
+        <p id ="desktopMessage" class="hidden">go to your mobile</p>
+    </div>
+
+    <script src="app.js"></script>
+    
+    <script>
+        function startSequence() {
+            console.log("Any console log"); // Debug
+
+            // Start the typewriter effect for pageOneText
+            startTypewriterEffect("paragraphText", 100, function() {
+                console.log("Page One Text completed. Starting Text Two..."); // Debug
+
+                // After pageOneText finishes, start the typewriter effect for pageTwoText
+                startTypewriterEffect("typingText", 100, function() {
+                    console.log("Text two completed. Setting up input field..."); // Debug
+                    // After pageTwoText finishes, show the input field
+                    const inputField = document.getElementById("inputField");
+                    inputField.classList.remove("hidden");
+                    inputField.focus();
+                    // Set up the input field to check for matching text
+                    setupInputField("typingText", "inputField", "dayOneOne.html");
+                });
+            });
+        }
+
+        // Call startTypewriterEffect independently after the page loads
+        window.onload = function() {
+            handleDeviceDetection(); // Ensure device detection runs
+            if (isMobileDevice()) {
+                startSequence(); // Start the sequence for mobile devices
+            } else {
+                startTypewriterEffect("desktopMessage", 100); // Show desktop message
+            }
+        };
+    </script>
+</body>
+</html>
